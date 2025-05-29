@@ -1,3 +1,14 @@
-:root{
-    --main-black : #1D2024;
+:root {
+  --mainColor-black: #1d2024;
+  --subColor-black_333: #333;
+  --subColor-black_777: #777;
+  --subColor-black_999: #999;
+  --subColor-black_eee: #eee;
+
+  /* Brand Color */
+  --ikea-brandColor: #3a92e5;
+  --freitag-brandColor: #313740;
+  --reo-brandColor: #e07127;
+  --millie-brandColor: #f1b957;
+  --chroma-brandColor: #8e5e99;
 }

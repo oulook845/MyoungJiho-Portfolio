@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyoungJiho Portfolio</title>
     <link rel="stylesheet" href="./css/import.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <!-- #header -->
     <header id="header">
       <div class="inner">
-        <h1 id="logo">
-          <a href="#"></a>
-        </h1>
         <nav id="gnb">
-          <ul id="gnb-ul">
+          <ul id="gnb-ul" class="flex justify-center fSize-22">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Create</a></li>
@@ -23,18 +21,195 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
+        <div id="allMenu">
+          <span class="text-hidden">전체메뉴</span>
+        </div>
       </div>
     </header>
 
     <!-- #main -->
-    <main id="main"></main>
+    <main id="main">
+      <div id="bgWrap">
+        <div class="bgImg"></div>
+      </div>
+      <section id="visual">
+        <div class="inner textAlign-center flex justify-center align-center flex-column">
+          <div class="txtBox">
+            <h1 id="logo" class="fSize-348">
+              <a href="#">
+                OULOOK
+                <span class="text-hidden">MyoungJiho Portfolio</span>
+              </a>
+            </h1>
+            <p class="desc" class="fSize-22">
+              'OULOOK'의 의미는 때묻지 않은 '소년의 시선'으로 세상을 바라보기 위한 다짐에서 만들었습니다.
+              <br />
+              열정이 가득했던 소년때를 기억하며 늘 배우는 자세로 임하겠습니다
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutMe">
+        <div class="inner">
+          <div class="txtBox">
+            <h2 class="fSize-44"><span>About Me</span></h2>
+            <p class="fSize-32"><span>명지호</span></p>
+            <p class="fSize-22">
+              <span>
+                공부하고 만들어본 작업의 결과물들을 담았습니다. 배울것이 아직 더 많지만 쌓여가는 경험과 함께 성장하는
+                사람이 되고싶습니다.
+              </span>
+            </p>
+          </div>
+
+          <div id="skillWrap">
+            <div id="usingNow" class="skillList">
+              <h3>USING NOW</h3>
+              <ul class="flex-wrap">
+                <li>
+                  <figure>
+                    <img src="./images/icon/html5.png" alt="html5" />
+                    <figcaption>HTML5</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/css3.png" alt="css3" />
+                    <figcaption>css3</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/sass.png" alt="sass" />
+                    <figcaption>SASS</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/javaScript.png" alt="javaScript" />
+                    <figcaption>JAVASCRIPT</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/git.png" alt="Git" />
+                    <figcaption>GIT</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/figma.png" alt="figma" />
+                    <figcaption>FIGMA</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/photoshop.png" alt="Photoshop" />
+                    <figcaption>Photoshop</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/illustrator.png" alt="illustrator" />
+                    <figcaption>illustrator</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/swiper.png" alt="Swiper" />
+                    <figcaption>Swiper</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="./images/icon/gsap.png" alt="gsap" />
+                    <figcaption>GSAP</figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <div id="triedUsing" class="skillList">
+              <h3>TRIED USING</h3>
+              <ul class="flex-wrap">
+                <li>
+                  <figure>
+                    <img src="./images/icon/afterEffect.png" alt="AfterEffect" />
+                    <figcaption>AfterEffect</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <img src="./images/icon/preimiere.png" alt="Preimiere" />
+                  <figcaption>Preimiere</figcaption>
+                </li>
+                <li>
+                  <img src="./images/icon/xd.png" alt="인디자인" />
+                  <figcaption>xd</figcaption>
+                </li>
+                <li>
+                  <img src="./images/icon/bootstrap.png" alt="Bootstrap" />
+                  <figcaption>BOOTSTRAP</figcaption>
+                </li>
+                <li>
+                  <img src="./images/icon/chart.png" alt="Chart.js" />
+                  <figcaption>Chart.js</figcaption>
+                </li>
+                <li>
+                  <img src="./images/icon/sortable.png" alt="Sortable" />
+                  <figcaption>Sortable.js</figcaption>
+                </li>
+              </ul>
+            </div>
+
+            <div id="learning" class="skillList">
+              <h3>LEARNING</h3>
+              <ul class="flex-wrap">
+                <li>
+                  <figure>
+                    <img src="./images/icon/react.png" alt="React" />
+                    <figcaption>REACT</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <img src="./images/icon/mongoDB.png" alt="mongoDB" />
+                  <figcaption>MONGODB</figcaption>
+                </li>
+                <li>
+                  <img src="./images/icon/typeScript.png" alt="typeScript" />
+                  <figcaption>TYPESCRIPT</figcaption>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="createCoding">
+        <div class="inner"></div>
+      </section>
+
+      <section id="cloneCoding">
+        <div class="inner"></div>
+      </section>
+
+      <section id="learningList">
+        <div class="inner"></div>
+      </section>
+    </main>
 
     <!-- #footer -->
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="inner"></div>
+    </footer>
 
     <!-- script -->
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- GSAP SpiltText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

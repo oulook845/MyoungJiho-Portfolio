@@ -1,11 +1,113 @@
-#header{
-
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30px;
+  z-index: 9999;
+  .inner {
+    padding: 0 30px;
+    #gnb {
+      width: fit-content;
+      color: #fff;
+      margin: 0 auto;
+      padding: 10px 80px;
+      border-radius: 999px;
+      background: #333333be;
+      ul#gnb-ul {
+        gap: 40px;
+      }
+    }
+    #allMenu {
+      width: 30px;
+      height: 15px;
+    }
+  }
 }
 
-#main{
+#main {
+  #bgWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    // background: #000;
+    background: var(--mainColor-black);
+    position: fixed;
+    left: 0;
+    top: 0;
+    user-select: none;
+    .bgImg {
+      width: 260%;
+      height: 260vh;
+      background-image: url(../images/visualBg.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.5;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transform-origin: center;
+    }
+  }
+  section {
+    position: relative;
+    &#visual {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
 
+      .inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .txtBox {
+          position: relative;
+          color: #fff;
+          overflow: hidden;
+          #logo {
+            font-family: "Protest Guerrilla";
+            // font-size: 140px;
+          }
+          p.desc {
+            width: max-content;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 100%);
+          }
+        }
+      }
+    }
+    &#aboutMe {
+      height: 100vh;
+      .inner {
+        color: #fff;
+        .txtBox {
+        }
+        #skillWrap {
+          div.skillList {
+          }
+        }
+      }
+    }
+
+    &#createCoding {
+      .inner {
+      }
+    }
+    &#cloneCoding {
+      .inner {
+      }
+    }
+    &#learningList {
+      .inner {
+      }
+    }
+  }
 }
 
-#footer{
-
+#footer {
+  .inner {
+  }
 }

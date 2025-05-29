@@ -19,6 +19,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.flex-column{
+  flex-direction: column;
+}
 .justify-center{
   justify-content: center;
 }
@@ -28,8 +31,25 @@
 .justify-around{
   justify-content: space-around;
 }
-.flex-column{
-  flex-direction: column;
+.justify-evenly{
+  justify-content: space-evenly;
+}
+.align-center{
+  align-items: center;
+}
+.align-end{
+  align-items:end;
+}
+
+/* text */
+.textAlign-center{
+  text-align: center;
+}
+.textAlign-left{
+  text-align: left;
+}
+.textAlign-right{
+  text-align: right;
 }
 
 /* font */
