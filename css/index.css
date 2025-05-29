@@ -77,8 +77,90 @@
   transform: translate(-50%, 100%);
 }
 #main section#aboutMe {
-  height: 100vh;
+  padding: 170px 0 120px;
 }
 #main section#aboutMe .inner {
+  max-width: 1500px;
+  margin: 0 auto;
   color: #fff;
+}
+#main section#aboutMe .inner .txtBox .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+#main section#aboutMe .inner .txtBox .name {
+  margin-top: 50px;
+}
+#main section#aboutMe .inner .txtBox .txt {
+  margin-top: 30px;
+}
+#main section#aboutMe .inner #skillWrap {
+  margin-top: 170px;
+  gap: 10px;
+  overflow: hidden;
+}
+#main section#aboutMe .inner #skillWrap div.skillList {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+#main section#aboutMe .inner #skillWrap div.skillList:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
+#main section#aboutMe .inner #skillWrap div.skillList h3 {
+  font-weight: bold;
+}
+#main section#aboutMe .inner #skillWrap div.skillList ul {
+  margin-top: 30px;
+  row-gap: 30px;
+}
+#main section#aboutMe .inner #skillWrap div.skillList ul li {
+  width: 25%;
+  text-align: center;
+  font-size: 12px;
+}
+#main section#aboutMe .inner #skillWrap div.skillList ul li figure figcaption {
+  margin-top: 10px;
+}
+#main section#createCoding {
+  background: #fff;
+}
+#main section#createCoding .inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+#main section#createCoding .inner .txtBox {
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background: #fff;
+}
+#main section#createCoding .inner .pageNumber_wrap {
+  width: fit-content;
+  line-height: 1;
+  font-family: "Protest Guerrilla", sans-serif;
+  position: relative;
+}
+#main section#createCoding .inner .pageNumber_wrap .pageNumber {
+  height: 220px;
+  overflow: hidden;
+}
+#main section#createCoding .inner .pageNumber_wrap .pageNumber span {
+  height: 220px;
+}
+#main section#createCoding .inner .pageNumber_wrap .pageNumber .transNum {
+  transform: translateY(-100%);
+}
+#main section#createCoding .inner .pageNumber_wrap .pageNumber .transNum span {
+  display: block;
 }

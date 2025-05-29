@@ -79,23 +79,107 @@
         }
       }
     }
+
     &#aboutMe {
-      height: 100vh;
+      padding: 170px 0 120px;
       .inner {
+        max-width: 1500px;
+        margin: 0 auto;
         color: #fff;
         .txtBox {
+          .title {
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: #fff;
+            }
+          }
+          .name {
+            margin-top: 50px;
+          }
+          .txt {
+            margin-top: 30px;
+          }
         }
         #skillWrap {
+          // height: 0;
+          margin-top: 170px;
+          gap: 10px;
+          overflow: hidden;
           div.skillList {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+            // opacity: 0;
+            &:not(:last-child) {
+              &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 90%;
+                background: #fff;
+                position: absolute;
+                right: 0;
+                top: 5%;
+              }
+            }
+            h3 {
+              font-weight: bold;
+            }
+            ul {
+              margin-top: 30px;
+              row-gap: 30px;
+              li {
+                width: calc(100% / 4);
+                text-align: center;
+                font-size: 12px;
+                figure {
+                  figcaption {
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &#createCoding {
+      background: #fff;
+      .inner {
+        max-width: 1500px;
+        margin: 0 auto;
+        .txtBox {
+          width: 100%;
+          height: 100vh;
+          gap: 20px;
+          background: #fff;
+        }
+        .pageNumber_wrap {
+          width: fit-content;
+          line-height: 1;
+          font-family: "Protest Guerrilla", sans-serif;
+
+          position: relative;
+          .pageNumber {
+            height: 220px;
+            overflow: hidden;
+            span {
+              height: 220px;
+            }
+            .transNum {
+              transform: translateY(-100%);
+              span {
+                display: block;
+              }
+            }
           }
         }
       }
     }
 
-    &#createCoding {
-      .inner {
-      }
-    }
     &#cloneCoding {
       .inner {
       }
