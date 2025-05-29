@@ -148,11 +148,11 @@
 #main section#createCoding .inner .pageNumber_wrap {
   width: fit-content;
   line-height: 1;
-  font-family: "Protest Guerrilla", sans-serif;
   position: relative;
 }
 #main section#createCoding .inner .pageNumber_wrap .pageNumber {
   height: 220px;
+  font-family: "Protest Guerrilla", sans-serif;
   overflow: hidden;
 }
 #main section#createCoding .inner .pageNumber_wrap .pageNumber span {
@@ -163,4 +163,215 @@
 }
 #main section#createCoding .inner .pageNumber_wrap .pageNumber .transNum span {
   display: block;
+}
+#main section#createCoding .inner .pageNumber_wrap p {
+  text-indent: 20px;
+}
+#main section#createCoding ul#createCode_wrap {
+  margin-top: 150px;
+  position: relative;
+}
+#main section#createCoding ul#createCode_wrap li {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+#main section#createCoding ul#createCode_wrap li#ikeaCoding {
+  background-color: var(--ikea-brandColor);
+}
+#main section#createCoding ul#createCode_wrap li#freitagCoding {
+  background-color: var(--freitag-brandColor);
+}
+#main section#createCoding ul#createCode_wrap li#reoCoding {
+  background-color: var(--reo-brandColor);
+}
+#main section#createCoding ul#createCode_wrap li#millieCoding {
+  background-color: var(--millie-brandColor);
+}
+#main section#createCoding ul#createCode_wrap li#chromaCoding {
+  background-color: var(--chroma-brandColor);
+}
+#main section#createCoding ul#createCode_wrap li .codeInfo {
+  display: flex;
+  width: 1300px;
+  height: 500px;
+  margin: 0 auto;
+  background: #fff;
+}
+#main section#cloneCoding {
+  background: #fff;
+  padding-bottom: 450px;
+}
+#main section#cloneCoding .inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+#main section#cloneCoding .inner .pageNumber_wrap {
+  width: fit-content;
+  line-height: 1;
+  position: relative;
+}
+#main section#cloneCoding .inner .pageNumber_wrap .pageNumber {
+  height: 220px;
+  font-family: "Protest Guerrilla", sans-serif;
+  overflow: hidden;
+}
+#main section#cloneCoding .inner .pageNumber_wrap .pageNumber span {
+  height: 220px;
+}
+#main section#cloneCoding .inner .pageNumber_wrap .pageNumber .transNum {
+  transform: translateY(-100%);
+}
+#main section#cloneCoding .inner .pageNumber_wrap .pageNumber .transNum span {
+  display: block;
+}
+#main section#cloneCoding .inner .pageNumber_wrap p {
+  text-indent: 20px;
+}
+#main section#cloneCoding ul#cloneCode_wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 150px;
+  gap: 160px;
+}
+#main section#cloneCoding ul#cloneCode_wrap li:nth-child(even) {
+  transform: translateY(50%);
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure {
+  width: 590px;
+  height: 590px;
+  position: relative;
+  background: url(../images/cloneCoding/clone01.png) no-repeat center/cover;
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure figcaption {
+  color: #fff;
+  font-size: 54px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#main section#cloneCoding ul#cloneCode_wrap li button.viewBtn {
+  font-size: 18px;
+  margin-top: 30px;
+}
+#main section#learningList {
+  background: #fff;
+  padding-bottom: 500px;
+}
+#main section#learningList .inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+#main section#learningList .inner .pageNumber_wrap {
+  width: fit-content;
+  line-height: 1;
+  position: relative;
+}
+#main section#learningList .inner .pageNumber_wrap .pageNumber {
+  height: 220px;
+  font-family: "Protest Guerrilla", sans-serif;
+  overflow: hidden;
+}
+#main section#learningList .inner .pageNumber_wrap .pageNumber span {
+  height: 220px;
+}
+#main section#learningList .inner .pageNumber_wrap .pageNumber .transNum {
+  transform: translateY(-100%);
+}
+#main section#learningList .inner .pageNumber_wrap .pageNumber .transNum span {
+  display: block;
+}
+#main section#learningList .inner .pageNumber_wrap p {
+  text-indent: 20px;
+}
+#main section#learningList .inner ul#leaningList {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 110px;
+  border-top: 1px solid #333;
+}
+#main section#learningList .inner ul#leaningList li {
+  border-bottom: 1px solid #333;
+}
+#main section#learningList .inner ul#leaningList li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+#main section#learningList .inner ul#leaningList li .listInfo h4 {
+  font-size: 1.375rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: bold;
+  color: var(--subColor-black_333);
+}
+#main section#learningList .inner ul#leaningList li .listInfo h4 span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--subColor-black_999);
+}
+#main section#learningList .inner ul#leaningList li .listInfo p {
+  font-size: 1rem;
+  margin-top: 70px;
+}
+#main section#learningList .inner ul#leaningList li p.desc {
+  width: 60%;
+  font-size: 1.25rem;
+  color: var(--subColor-black_777);
+}
+
+#footer {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor-black);
+  position: relative;
+}
+#footer h3 {
+  color: #fff;
+  mix-blend-mode: difference;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -45%);
+}
+#footer .inner ul#snsList {
+  gap: 30px;
+}
+#footer .inner ul#snsList li {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#footer .inner ul#snsList li#gitHub {
+  background-image: url(../images/snsIcon/gitHub.png);
+}
+#footer .inner ul#snsList li#tStory {
+  background-image: url(../images/snsIcon/tStory.png);
+}
+#footer .inner ul#snsList li#insta {
+  background-image: url(../images/snsIcon/insta.png);
 }

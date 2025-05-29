@@ -1,3 +1,12 @@
+// font size 컴포넌트
+@use "./fontSizes.scss";
+
+// .inner 공통 스타일
+@mixin maxWidth {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 #header {
   position: fixed;
   left: 0;
@@ -83,8 +92,7 @@
     &#aboutMe {
       padding: 170px 0 120px;
       .inner {
-        max-width: 1500px;
-        margin: 0 auto;
+        @include maxWidth();
         color: #fff;
         .txtBox {
           .title {
@@ -146,11 +154,11 @@
         }
       }
     }
+
     &#createCoding {
       background: #fff;
       .inner {
-        max-width: 1500px;
-        margin: 0 auto;
+        @include maxWidth();
         .txtBox {
           width: 100%;
           height: 100vh;
@@ -160,11 +168,11 @@
         .pageNumber_wrap {
           width: fit-content;
           line-height: 1;
-          font-family: "Protest Guerrilla", sans-serif;
 
           position: relative;
           .pageNumber {
             height: 220px;
+            font-family: "Protest Guerrilla", sans-serif;
             overflow: hidden;
             span {
               height: 220px;
@@ -176,22 +184,235 @@
               }
             }
           }
+          p {
+            text-indent: 20px;
+          }
+        }
+      }
+      ul#createCode_wrap {
+        margin-top: 150px;
+        position: relative;
+        li {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: sticky;
+          left: 0;
+          top: 0;
+          &#ikeaCoding {
+            background-color: var(--ikea-brandColor);
+          }
+          &#freitagCoding {
+            background-color: var(--freitag-brandColor);
+          }
+          &#reoCoding {
+            background-color: var(--reo-brandColor);
+          }
+          &#millieCoding {
+            background-color: var(--millie-brandColor);
+          }
+          &#chromaCoding {
+            background-color: var(--chroma-brandColor);
+          }
+          .codeInfo {
+            display: flex;
+            width: 1300px;
+            height: 500px;
+            margin: 0 auto;
+            background: #fff;
+          }
         }
       }
     }
 
     &#cloneCoding {
+      background: #fff;
+      padding-bottom: 450px;
       .inner {
+        @include maxWidth();
+        padding-top: 300px;
+        .pageNumber_wrap {
+          width: fit-content;
+          line-height: 1;
+
+          position: relative;
+          .pageNumber {
+            height: 220px;
+            font-family: "Protest Guerrilla", sans-serif;
+            overflow: hidden;
+            span {
+              height: 220px;
+            }
+            .transNum {
+              transform: translateY(-100%);
+              span {
+                display: block;
+              }
+            }
+          }
+          p {
+            text-indent: 20px;
+          }
+        }
+      }
+      ul#cloneCode_wrap {
+        @include maxWidth();
+        margin-top: 150px;
+        gap: 160px;
+        li {
+          &:nth-child(even) {
+            transform: translateY(50%);
+          }
+          figure {
+            width: 590px;
+            height: 590px;
+            position: relative;
+            background: url(../images/cloneCoding/clone01.png) no-repeat center / cover;
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+            figcaption {
+              color: #fff;
+              font-size: 54px;
+              font-weight: bold;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+            }
+          }
+          button.viewBtn {
+            font-size: 18px;
+            margin-top: 30px;
+          }
+        }
       }
     }
+
     &#learningList {
+      background: #fff;
+      padding-bottom: 500px;
       .inner {
+        @include maxWidth();
+        padding-top: 300px;
+        .pageNumber_wrap {
+          width: fit-content;
+          line-height: 1;
+
+          position: relative;
+          .pageNumber {
+            height: 220px;
+            font-family: "Protest Guerrilla", sans-serif;
+            overflow: hidden;
+            span {
+              height: 220px;
+            }
+            .transNum {
+              transform: translateY(-100%);
+              span {
+                display: block;
+              }
+            }
+          }
+          p {
+            text-indent: 20px;
+          }
+        }
+
+        ul#leaningList {
+          @include maxWidth();
+          margin-top: 110px;
+          border-top: 1px solid #333;
+          li {
+            border-bottom: 1px solid #333;
+            a {
+              display: flex;
+              justify-content: space-between;
+              padding: 50px;
+            }
+
+            .listInfo {
+              h4 {
+                @include fontSizes.fontSize(22);
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-weight: bold;
+                color: var(--subColor-black_333);
+                span {
+                  @include fontSizes.fontSize(16);
+                  font-weight: 400;
+                  color: var(--subColor-black_999);
+                }
+              }
+              p {
+                @include fontSizes.fontSize(16);
+                margin-top: 70px;
+              }
+            }
+            p.desc {
+              width: 60%;
+              @include fontSizes.fontSize(20);
+              color: var(--subColor-black_777);
+            }
+          }
+        }
       }
     }
   }
 }
 
 #footer {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor-black);
+  position: relative;
+  h3 {
+    color: #fff;
+    mix-blend-mode: difference;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -45%);
+  }
   .inner {
+    .txtBox {
+      .name {
+      }
+      .phoneNum {
+      }
+      .eMail {
+      }
+    }
+    ul#snsList {
+      gap: 30px;
+      li {
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        &#gitHub {
+          background-image: url(../images/snsIcon/gitHub.png);
+        }
+        &#tStory {
+          background-image: url(../images/snsIcon/tStory.png);
+        }
+        &#insta {
+          background-image: url(../images/snsIcon/insta.png);
+        }
+      }
+    }
   }
 }

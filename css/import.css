@@ -9,3 +9,6 @@ html, body{
     line-height: 1.75;
     letter-spacing: 0.1rem;
 }
+button{
+    cursor: pointer;
+}
