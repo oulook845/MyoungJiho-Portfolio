@@ -1,0 +1,74 @@
+/* text style */
+.text-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* flex */
+.flex{
+  display: flex;
+}
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-around{
+  justify-content: space-around;
+}
+.flex-column{
+  flex-direction: column;
+}
+
+/* font */
+.fSize-432 {
+  font-size: 27rem; /* 432px */
+}
+.fSize-348 {
+  font-size: 21.75rem; /* 348px */
+}
+.fSize-216 {
+  font-size: 13.5rem; /* 216px */
+}
+.fSize-140 {
+  font-size: 8.75rem; /* 140px */
+}
+.fSize-52 {
+  font-size: 3.25rem; /* 52px */
+}
+.fSize-44 {
+  font-size: 2.75; /* 44px */
+}
+.fSize-32 {
+  font-size: 2rem; /* 32px */
+}
+.fSize-22 {
+  font-size: 1.375rem; /* 22px */
+}
+.fSize-20 {
+  font-size: 1.25rem; /* 20px */
+}
+.fSize-18 {
+  font-size: 1.125rem; /* 18px */
+}
+.fSize-16 {
+  font-size: 1rem; /* 16px */
+}
+.fSize-14 {
+  font-size: 0.875rem; /* 14px */
+}
+.fSize-12 {
+  font-size: 0.75rem; /* 12px */
+}
