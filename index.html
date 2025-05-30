@@ -10,20 +10,21 @@
   <body>
     <!-- #header -->
     <header id="header">
-      <div class="inner">
+      <div class="inner flex align-center">
         <nav id="gnb">
           <ul id="gnb-ul" class="flex justify-center fSize-18">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Create</a></li>
-            <li><a href="#">Clone</a></li>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#visual">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
+            <li><a href="#createCoding">Create</a></li>
+            <li><a href="#cloneCoding">Clone</a></li>
+            <li><a href="#learningList">Learn</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
         </nav>
-        <div id="allMenu">
+        <button id="allMenu" class="flex flex-column justify-between">
+          <div></div>
           <span class="text-hidden">전체메뉴</span>
-        </div>
+        </button>
       </div>
     </header>
 
@@ -46,7 +47,7 @@
               </h1>
               <span class="text-hidden">MyoungJiho Portfolio</span>
             </div>
-            <p class="intro" class="fSize-22">
+            <p class="intro fSize-22">
               'OULOOK'의 의미는 때묻지 않은 '소년의 시선'으로 세상을 바라보기 위한 다짐에서 만들었습니다.
               <br />
               열정이 가득했던 소년때를 기억하며 늘 배우는 자세로 임하겠습니다
@@ -56,7 +57,7 @@
       </section>
 
       <section id="aboutMe">
-        <div class="inner flex flex-column justify-center">
+        <div class="inner paddingBox flex flex-column justify-around">
           <div class="txtBox">
             <h2 class="title flex fSize-44">
               <span>A</span>
@@ -214,8 +215,8 @@
         </div>
       </section>
 
-      <section id="createCoding" class="bgTrans">
-        <div class="inner">
+      <section id="createCoding">
+        <div class="inner paddingBox">
           <div class="txtBox flex flex-column justify-center align-center textAlign-center">
             <h2 class="fSize-44">
               <span>I'm here to learn about your world.</span>
@@ -273,8 +274,8 @@
         </ul>
       </section>
 
-      <section id="cloneCoding" class="bgTrans">
-        <div class="inner">
+      <section id="cloneCoding">
+        <div class="inner paddingBox">
           <div class="pageNumber_wrap">
             <div class="pageNumber flex fSize-216">
               <span>0</span>
@@ -297,9 +298,22 @@
               <span>n</span>
               <span>g</span>
             </p>
+            <p class="txt flex fSize-44">
+              <span>U</span>
+              <span>X</span>
+              <span>U</span>
+              <span>I</span>
+              &nbsp;
+              <span>D</span>
+              <span>e</span>
+              <span>s</span>
+              <span>i</span>
+              <span>g</span>
+              <span>n</span>
+            </p>
           </div>
         </div>
-        <ul id="cloneCode_wrap" class="flex-wrap justify-between">
+        <ul id="cloneCode_wrap" class="paddingBox flex-wrap justify-between">
           <li>
             <figure id="pulmuone">
               <figcaption>Clone01</figcaption>
@@ -338,8 +352,8 @@
         </ul>
       </section>
 
-      <section id="learningList" class="bgTrans">
-        <div class="inner">
+      <section id="learningList">
+        <div class="inner paddingBox">
           <div class="pageNumber_wrap">
             <div class="pageNumber flex fSize-216">
               <span>0</span>
@@ -455,11 +469,11 @@
           <span>T</span>
         </h3>
       </div>
-      <div class="inner flex justify-between align-end">
+      <div class="inner paddingBox flex justify-between align-end">
         <div class="txtBox">
-          <p class="name fSize-44">MYOUNG JIHO</p>
-          <p class="phoneNum fSize-16">010 - 3929 - 4409</p>
-          <p class="eMail fSize-16">audwlgh0221@gmail.com</p>
+          <p id="name" class="fSize-44">MYOUNG JIHO</p>
+          <p id="phoneNum" class="fSize-16">010 - 3929 - 4409</p>
+          <p id="eMail" class="fSize-16">audwlgh0221@gmail.com</p>
         </div>
         <ul id="snsList" class="flex">
           <li id="gitHub">

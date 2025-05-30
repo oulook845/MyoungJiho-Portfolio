@@ -1,12 +1,23 @@
+@charset "UTF-8";
+/* 1440px ~ */
+/* 595px - 1440px */
+/* ~ 595px */
 #header {
+  margin-top: 30px;
   position: fixed;
   left: 0;
   right: 0;
-  top: 30px;
+  top: 0;
   z-index: 9999;
+  overflow: hidden;
 }
 #header .inner {
   padding: 0 30px;
+}
+@media (max-width: 596px) {
+  #header .inner {
+    justify-content: flex-end;
+  }
 }
 #header .inner #gnb {
   width: fit-content;
@@ -15,24 +26,65 @@
   padding: 10px 80px;
   border-radius: 999px;
   background: rgba(51, 51, 51, 0.7450980392);
+  transition: 0.25s ease-in-out;
+}
+@media (max-width: 596px) {
+  #header .inner #gnb {
+    position: absolute;
+    display: none;
+  }
 }
 #header .inner #gnb ul#gnb-ul {
   gap: 40px;
 }
 #header .inner #allMenu {
+  display: none;
   width: 30px;
   height: 15px;
 }
+#header .inner #allMenu::after, #header .inner #allMenu::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--mainColor-black);
+}
+#header .inner #allMenu div {
+  width: 100%;
+  height: 3px;
+  background: var(--mainColor-black);
+}
+@media (max-width: 596px) {
+  #header .inner #allMenu {
+    display: flex;
+  }
+}
 
 #main #bgWrap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: var(--mainColor-black);
+  background: #000;
   position: fixed;
   left: 0;
   top: 0;
   user-select: none;
+}
+@media (max-width: 596px) {
+  #main #bgWrap {
+    background-color: #fff;
+    position: absolute;
+  }
+  #main #bgWrap::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 #main #bgWrap .bgImg {
   width: 260%;
@@ -42,11 +94,13 @@
   background-position: center;
   background-size: contain;
   opacity: 0.5;
+  filter: blur(5px);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: center;
+  transition: all 0.75s linear;
 }
 #main section {
   position: relative;
@@ -55,6 +109,18 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+@media (max-width: 1440px) {
+  #main section#visual {
+    position: sticky;
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 596px) {
+  #main section#visual {
+    position: relative;
+  }
 }
 #main section#visual .inner {
   width: 100%;
@@ -67,10 +133,21 @@
   overflow: hidden;
   text-align: center;
 }
+@media (max-width: 596px) {
+  #main section#visual .inner .txtBox {
+    color: var(--mainColor-black);
+    padding: 0 100px;
+  }
+}
 #main section#visual .inner .txtBox .title #logo {
   font-family: "Protest Guerrilla";
   line-height: 1;
   overflow: hidden;
+}
+@media (max-width: 596px) {
+  #main section#visual .inner .txtBox .title #logo {
+    font-size: 8.75rem;
+  }
 }
 #main section#visual .inner .txtBox .title #logo span {
   transform: translateY(100%);
@@ -80,18 +157,58 @@
   text-align: center;
   transition: 0.5s;
 }
+@media (max-width: 1440px) {
+  #main section#visual .inner .txtBox p.intro {
+    height: auto;
+  }
+}
+@media (max-width: 596px) {
+  #main section#visual .inner .txtBox p.intro {
+    text-align: left;
+    margin-top: 80px;
+  }
+  #main section#visual .inner .txtBox p.intro br {
+    display: none;
+  }
+}
 #main section#aboutMe {
   height: 200vh;
   position: relative;
 }
+@media (max-width: 1440px) {
+  #main section#aboutMe {
+    height: auto;
+    background-color: var(--mainColor-black);
+    border-radius: 200px 200px 0 0;
+  }
+}
+@media (max-width: 596px) {
+  #main section#aboutMe {
+    background-color: transparent;
+  }
+}
 #main section#aboutMe .inner {
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   color: #fff;
   position: sticky;
   left: 0;
   top: 0%;
+}
+@media (max-width: 596px) {
+  #main section#aboutMe .inner {
+    color: var(--mainColor-black);
+  }
+}
+@media (max-width: 596px) {
+  #main section#aboutMe .inner .txtBox {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+  }
 }
 #main section#aboutMe .inner .txtBox .title {
   overflow: hidden;
@@ -103,11 +220,11 @@
 #main section#aboutMe .inner .txtBox .line {
   width: 0%;
   height: 2px;
-  background: #fff;
+  background: currentColor;
   transition: 1s;
 }
 #main section#aboutMe .inner .txtBox .name {
-  margin-top: 50px;
+  margin-top: 2.604vw; /* 50px */
   overflow: hidden;
 }
 #main section#aboutMe .inner .txtBox .name span {
@@ -115,7 +232,7 @@
   transition: 0.5s;
 }
 #main section#aboutMe .inner .txtBox .desc {
-  margin-top: 30px;
+  margin-top: 1.563vw; /* 30px */
   overflow: hidden;
 }
 #main section#aboutMe .inner .txtBox .desc span {
@@ -123,9 +240,18 @@
   transition: 0.5s;
 }
 #main section#aboutMe .inner #skillWrap {
-  margin-top: 10%;
   gap: 10px;
   overflow: hidden;
+}
+@media (max-width: 596px) {
+  #main section#aboutMe .inner #skillWrap {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 150px;
+  }
 }
 #main section#aboutMe .inner #skillWrap div.skillList {
   flex: 1;
@@ -139,10 +265,18 @@
   display: block;
   width: 1px;
   height: 90%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   right: 0;
   top: 5%;
+}
+@media (max-width: 596px) {
+  #main section#aboutMe .inner #skillWrap div.skillList {
+    padding: 0;
+  }
+  #main section#aboutMe .inner #skillWrap div.skillList:not(:last-child)::after {
+    display: none;
+  }
 }
 #main section#aboutMe .inner #skillWrap div.skillList h3 {
   font-weight: bold;
@@ -159,12 +293,20 @@
 #main section#aboutMe .inner #skillWrap div.skillList ul li figure figcaption {
   margin-top: 10px;
 }
-#main section#createCoding {
-  opacity: 0;
+@media (max-width: 1440px) {
+  #main section#createCoding {
+    background-color: #fff;
+  }
 }
 #main section#createCoding .inner {
   max-width: 1500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 596px) {
+  #main section#createCoding .inner {
+    padding: 0 20px;
+  }
 }
 #main section#createCoding .inner .txtBox {
   width: 100%;
@@ -180,6 +322,9 @@
 #main section#createCoding .inner .txtBox p span {
   opacity: 0;
   transition: 0.75s;
+}
+#main section#createCoding .inner .txtBox h2 {
+  font-size: 32px;
 }
 #main section#createCoding ul#createCode_wrap {
   margin-top: 150px;
@@ -218,27 +363,66 @@
   background: #fff; /* delt */
 }
 #main section#cloneCoding {
-  padding-bottom: 450px;
+  padding: 20% 0 30%;
 }
 #main section#cloneCoding .inner {
   max-width: 1500px;
-  margin: 0 auto;
-  padding-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #main section#cloneCoding ul#cloneCode_wrap {
   max-width: 1500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 150px;
   gap: 160px;
 }
+@media (max-width: 1440px) {
+  #main section#cloneCoding ul#cloneCode_wrap {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap {
+    gap: 50px;
+  }
+}
+#main section#cloneCoding ul#cloneCode_wrap li {
+  opacity: 0;
+  transition: 0.5s;
+}
+@media (max-width: 1440px) {
+  #main section#cloneCoding ul#cloneCode_wrap li {
+    width: 50%;
+  }
+}
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap li {
+    width: 100%;
+  }
+}
 #main section#cloneCoding ul#cloneCode_wrap li:nth-child(even) {
   transform: translateY(50%);
+}
+@media (max-width: 1440px) {
+  #main section#cloneCoding ul#cloneCode_wrap li:nth-child(even) {
+    transform: translateY(0%);
+    margin-left: auto;
+    text-align: right;
+  }
 }
 #main section#cloneCoding ul#cloneCode_wrap li figure {
   width: 590px;
   height: 590px;
   position: relative;
   background: url(../images/cloneCoding/clone01.png) no-repeat center/cover;
+}
+@media (max-width: 1440px) {
+  #main section#cloneCoding ul#cloneCode_wrap li figure {
+    width: 100%;
+    height: calc((100vw - 140px) / 2);
+  }
 }
 #main section#cloneCoding ul#cloneCode_wrap li figure::before {
   content: "";
@@ -264,19 +448,33 @@
   font-size: 18px;
   margin-top: 30px;
 }
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap li button.viewBtn {
+    margin: 0;
+    padding: 30px 20px;
+  }
+}
 #main section#learningList {
-  padding-bottom: 500px;
+  padding: 20% 0 30%;
 }
 #main section#learningList .inner {
   max-width: 1500px;
-  margin: 0 auto;
-  padding-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #main section#learningList .inner ul#leaningList {
   max-width: 1500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 110px;
   border-top: 1px solid #333;
+}
+@media (max-width: 596px) {
+  #main section#learningList .inner ul#leaningList {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 #main section#learningList .inner ul#leaningList li {
   border-bottom: 1px solid #333;
@@ -288,9 +486,16 @@
   justify-content: space-between;
   padding: 50px;
 }
+@media (max-width: 596px) {
+  #main section#learningList .inner ul#leaningList li a {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+}
 #main section#learningList .inner ul#leaningList li .listInfo h4 {
   font-size: 1.375rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   font-weight: bold;
@@ -305,10 +510,26 @@
   font-size: 1rem;
   margin-top: 70px;
 }
+@media (max-width: 596px) {
+  #main section#learningList .inner ul#leaningList li .listInfo p {
+    margin-top: 20px;
+  }
+}
 #main section#learningList .inner ul#leaningList li p.desc {
   width: 60%;
   font-size: 1.25rem;
   color: var(--subColor-black_777);
+}
+@media (max-width: 596px) {
+  #main section#learningList .inner ul#leaningList li p.desc {
+    width: 100%;
+    margin-top: 50px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* 표시할 줄 수 */
+    text-overflow: ellipsis;
+  }
 }
 
 #footer {
@@ -321,7 +542,13 @@
   width: 100%;
   mix-blend-mode: difference;
   overflow: hidden;
-  transform: translate(0%, -45%);
+  transform: translateY(-45%);
+}
+@media (max-width: 596px) {
+  #footer .title {
+    padding: 50px 0;
+    transform: translateY(-100%);
+  }
 }
 #footer .title h3 {
   width: 100%;
@@ -329,17 +556,44 @@
   font-weight: bold;
   line-height: 1;
 }
+@media (max-width: 1440px) {
+  #footer .title h3 {
+    font-size: 216px;
+  }
+}
+@media (max-width: 596px) {
+  #footer .title h3 {
+    font-size: 52px;
+  }
+}
 #footer .title h3 span {
   opacity: 0;
   transition: 0.5s;
 }
 #footer .inner {
   max-width: 1500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 20%;
+}
+@media (max-width: 596px) {
+  #footer .inner {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    bottom: auto;
+  }
 }
 #footer .inner .txtBox {
   color: #fff;
@@ -347,6 +601,12 @@
 #footer .inner .txtBox p {
   opacity: 0;
   transition: 0.5s;
+}
+#footer .inner .txtBox p#phoneNum {
+  margin-top: 50px;
+}
+#footer .inner .txtBox p#eMail {
+  margin-top: 20px;
 }
 #footer .inner ul#snsList {
   gap: 30px;

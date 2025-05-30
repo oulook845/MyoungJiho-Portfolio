@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* 1440px ~ */
+/* 595px - 1440px */
+/* ~ 595px */
 /* text style */
 .text-hidden {
   position: absolute;
@@ -94,10 +97,15 @@
   font-size: 0.75rem; /* 12px */
 }
 
-/* Background Color */
-.bgTrans {
-  /* background-color: transparent; */
-  transition: 0.5s;
+/* .inner padding */
+.paddingBox {
+  padding: 0 70px;
+  box-sizing: content-box;
+}
+@media (max-width: 596px) {
+  .paddingBox {
+    padding: 0;
+  }
 }
 
 /* 영역별 페이지 번호 */
@@ -106,13 +114,18 @@
   line-height: 1;
   position: relative;
 }
+@media (max-width: 596px) {
+  .pageNumber_wrap {
+    margin: 0 auto;
+  }
+}
 .pageNumber_wrap .pageNumber {
   height: 220px;
   font-family: "Protest Guerrilla", sans-serif;
   overflow: hidden;
 }
 .pageNumber_wrap .pageNumber span {
-  height: 220px;
+  height: 100%;
 }
 .pageNumber_wrap .pageNumber .transNum {
   transform: translateY(0%);
@@ -121,11 +134,18 @@
 .pageNumber_wrap .pageNumber .transNum span {
   display: block;
 }
-.pageNumber_wrap p {
+.pageNumber_wrap p.txt {
+  height: 50px;
   margin-left: 20px;
   overflow: hidden;
 }
-.pageNumber_wrap p span {
+@media (max-width: 596px) {
+  .pageNumber_wrap p.txt {
+    margin-left: 0px;
+    justify-content: center;
+  }
+}
+.pageNumber_wrap p.txt span {
   width: fit-content;
   transform: translateY(100%);
   transition: 0.5s;

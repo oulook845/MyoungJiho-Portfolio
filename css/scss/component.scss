@@ -1,3 +1,26 @@
+// Breakpoints
+$breakpoint-mobile: 596px;
+$breakpoint-tablet: 1440px;
+
+/* 1440px ~ */
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet + 1}) {
+    @content;
+  }
+}
+/* 595px - 1440px */
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+/* ~ 595px */
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
 /* text style */
 .text-hidden {
   position: absolute;
@@ -99,25 +122,29 @@
   }
 }
 
-/* Background Color */
-.bgTrans {
-  /* background-color: transparent; */
-  // background-color: #fff;
-  transition: 0.5s;
+/* .inner padding */
+.paddingBox {
+  padding: 0 70px;
+  box-sizing: content-box;
+  @include mobile() {
+    padding: 0;
+  }
 }
 
 /* 영역별 페이지 번호 */
 .pageNumber_wrap {
   width: fit-content;
   line-height: 1;
-
   position: relative;
+  @include mobile() {
+    margin:0 auto
+  }
   .pageNumber {
     height: 220px;
     font-family: "Protest Guerrilla", sans-serif;
     overflow: hidden;
     span {
-      height: 220px;
+      height: 100%;
     }
     .transNum {
       transform: translateY(0%);
@@ -127,9 +154,14 @@
       }
     }
   }
-  p {
+  p.txt {
+    height: 50px;
     margin-left: 20px;
     overflow: hidden;
+    @include mobile() {
+      margin-left: 0px;
+      justify-content: center;
+    }
     span {
       width: fit-content;
       transform: translateY(100%);
@@ -137,3 +169,4 @@
     }
   }
 }
+
