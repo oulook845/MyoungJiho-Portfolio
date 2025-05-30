@@ -8,6 +8,7 @@ html, body{
     font-family: "Pretendard-Regular";
     line-height: 1.75;
     letter-spacing: 0.1rem;
+    background-color: #fff;
 }
 button{
     cursor: pointer;

@@ -65,40 +65,65 @@
   position: relative;
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
-#main section#visual .inner .txtBox #logo {
+#main section#visual .inner .txtBox .title #logo {
   font-family: "Protest Guerrilla";
+  line-height: 1;
+  overflow: hidden;
 }
-#main section#visual .inner .txtBox p.desc {
-  width: max-content;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 100%);
+#main section#visual .inner .txtBox .title #logo span {
+  transform: translateY(100%);
+}
+#main section#visual .inner .txtBox p.intro {
+  height: 0;
+  text-align: center;
+  transition: 0.5s;
 }
 #main section#aboutMe {
-  padding: 170px 0 120px;
+  height: 200vh;
+  position: relative;
 }
 #main section#aboutMe .inner {
+  height: 100vh;
   max-width: 1500px;
   margin: 0 auto;
   color: #fff;
+  position: sticky;
+  left: 0;
+  top: 0%;
 }
-#main section#aboutMe .inner .txtBox .title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
+#main section#aboutMe .inner .txtBox .title {
+  overflow: hidden;
+}
+#main section#aboutMe .inner .txtBox .title span {
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+#main section#aboutMe .inner .txtBox .line {
+  width: 0%;
+  height: 2px;
   background: #fff;
+  transition: 1s;
 }
 #main section#aboutMe .inner .txtBox .name {
   margin-top: 50px;
+  overflow: hidden;
 }
-#main section#aboutMe .inner .txtBox .txt {
+#main section#aboutMe .inner .txtBox .name span {
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+#main section#aboutMe .inner .txtBox .desc {
   margin-top: 30px;
+  overflow: hidden;
+}
+#main section#aboutMe .inner .txtBox .desc span {
+  transform: translateY(100%);
+  transition: 0.5s;
 }
 #main section#aboutMe .inner #skillWrap {
-  margin-top: 170px;
+  margin-top: 10%;
   gap: 10px;
   overflow: hidden;
 }
@@ -106,6 +131,8 @@
   flex: 1;
   padding: 40px;
   position: relative;
+  opacity: 0;
+  transition: 0.25s;
 }
 #main section#aboutMe .inner #skillWrap div.skillList:not(:last-child)::after {
   content: "";
@@ -133,7 +160,7 @@
   margin-top: 10px;
 }
 #main section#createCoding {
-  background: #fff;
+  opacity: 0;
 }
 #main section#createCoding .inner {
   max-width: 1500px;
@@ -143,29 +170,16 @@
   width: 100%;
   height: 100vh;
   gap: 20px;
-  background: #fff;
 }
-#main section#createCoding .inner .pageNumber_wrap {
-  width: fit-content;
-  line-height: 1;
-  position: relative;
-}
-#main section#createCoding .inner .pageNumber_wrap .pageNumber {
-  height: 220px;
-  font-family: "Protest Guerrilla", sans-serif;
+#main section#createCoding .inner .txtBox h2,
+#main section#createCoding .inner .txtBox p {
+  display: flex;
   overflow: hidden;
 }
-#main section#createCoding .inner .pageNumber_wrap .pageNumber span {
-  height: 220px;
-}
-#main section#createCoding .inner .pageNumber_wrap .pageNumber .transNum {
-  transform: translateY(-100%);
-}
-#main section#createCoding .inner .pageNumber_wrap .pageNumber .transNum span {
-  display: block;
-}
-#main section#createCoding .inner .pageNumber_wrap p {
-  text-indent: 20px;
+#main section#createCoding .inner .txtBox h2 span,
+#main section#createCoding .inner .txtBox p span {
+  opacity: 0;
+  transition: 0.75s;
 }
 #main section#createCoding ul#createCode_wrap {
   margin-top: 150px;
@@ -201,38 +215,15 @@
   width: 1300px;
   height: 500px;
   margin: 0 auto;
-  background: #fff;
+  background: #fff; /* delt */
 }
 #main section#cloneCoding {
-  background: #fff;
   padding-bottom: 450px;
 }
 #main section#cloneCoding .inner {
   max-width: 1500px;
   margin: 0 auto;
   padding-top: 300px;
-}
-#main section#cloneCoding .inner .pageNumber_wrap {
-  width: fit-content;
-  line-height: 1;
-  position: relative;
-}
-#main section#cloneCoding .inner .pageNumber_wrap .pageNumber {
-  height: 220px;
-  font-family: "Protest Guerrilla", sans-serif;
-  overflow: hidden;
-}
-#main section#cloneCoding .inner .pageNumber_wrap .pageNumber span {
-  height: 220px;
-}
-#main section#cloneCoding .inner .pageNumber_wrap .pageNumber .transNum {
-  transform: translateY(-100%);
-}
-#main section#cloneCoding .inner .pageNumber_wrap .pageNumber .transNum span {
-  display: block;
-}
-#main section#cloneCoding .inner .pageNumber_wrap p {
-  text-indent: 20px;
 }
 #main section#cloneCoding ul#cloneCode_wrap {
   max-width: 1500px;
@@ -274,35 +265,12 @@
   margin-top: 30px;
 }
 #main section#learningList {
-  background: #fff;
   padding-bottom: 500px;
 }
 #main section#learningList .inner {
   max-width: 1500px;
   margin: 0 auto;
   padding-top: 300px;
-}
-#main section#learningList .inner .pageNumber_wrap {
-  width: fit-content;
-  line-height: 1;
-  position: relative;
-}
-#main section#learningList .inner .pageNumber_wrap .pageNumber {
-  height: 220px;
-  font-family: "Protest Guerrilla", sans-serif;
-  overflow: hidden;
-}
-#main section#learningList .inner .pageNumber_wrap .pageNumber span {
-  height: 220px;
-}
-#main section#learningList .inner .pageNumber_wrap .pageNumber .transNum {
-  transform: translateY(-100%);
-}
-#main section#learningList .inner .pageNumber_wrap .pageNumber .transNum span {
-  display: block;
-}
-#main section#learningList .inner .pageNumber_wrap p {
-  text-indent: 20px;
 }
 #main section#learningList .inner ul#leaningList {
   max-width: 1500px;
@@ -312,6 +280,8 @@
 }
 #main section#learningList .inner ul#leaningList li {
   border-bottom: 1px solid #333;
+  opacity: 0;
+  transition: 0.5s;
 }
 #main section#learningList .inner ul#leaningList li a {
   display: flex;
@@ -347,14 +317,36 @@
   background-color: var(--mainColor-black);
   position: relative;
 }
-#footer h3 {
-  color: #fff;
+#footer .title {
+  width: 100%;
   mix-blend-mode: difference;
+  overflow: hidden;
+  transform: translate(0%, -45%);
+}
+#footer .title h3 {
+  width: 100%;
+  color: #fff;
   font-weight: bold;
+  line-height: 1;
+}
+#footer .title h3 span {
+  opacity: 0;
+  transition: 0.5s;
+}
+#footer .inner {
+  max-width: 1500px;
+  margin: 0 auto;
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -45%);
+  left: 0;
+  right: 0;
+  bottom: 20%;
+}
+#footer .inner .txtBox {
+  color: #fff;
+}
+#footer .inner .txtBox p {
+  opacity: 0;
+  transition: 0.5s;
 }
 #footer .inner ul#snsList {
   gap: 30px;

@@ -12,7 +12,7 @@
     <header id="header">
       <div class="inner">
         <nav id="gnb">
-          <ul id="gnb-ul" class="flex justify-center fSize-22">
+          <ul id="gnb-ul" class="flex justify-center fSize-18">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Create</a></li>
@@ -35,13 +35,18 @@
       <section id="visual">
         <div class="inner textAlign-center flex justify-center align-center flex-column">
           <div class="txtBox">
-            <h1 id="logo" class="fSize-348">
-              <a href="#">
-                OULOOK
-                <span class="text-hidden">MyoungJiho Portfolio</span>
-              </a>
-            </h1>
-            <p class="desc" class="fSize-22">
+            <div class="title">
+              <h1 id="logo" class="flex justify-center fSize-348">
+                <span>O</span>
+                <span>U</span>
+                <span>L</span>
+                <span>O</span>
+                <span>O</span>
+                <span>K</span>
+              </h1>
+              <span class="text-hidden">MyoungJiho Portfolio</span>
+            </div>
+            <p class="intro" class="fSize-22">
               'OULOOK'의 의미는 때묻지 않은 '소년의 시선'으로 세상을 바라보기 위한 다짐에서 만들었습니다.
               <br />
               열정이 가득했던 소년때를 기억하며 늘 배우는 자세로 임하겠습니다
@@ -51,11 +56,21 @@
       </section>
 
       <section id="aboutMe">
-        <div class="inner">
+        <div class="inner flex flex-column justify-center">
           <div class="txtBox">
-            <h2 class="title fSize-44"><span>About Me</span></h2>
-            <p class="name fSize-32"><span>명지호</span></p>
-            <p class="txt fSize-22">
+            <h2 class="title flex fSize-44">
+              <span>A</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+              &nbsp;
+              <span>M</span>
+              <span>e</span>
+            </h2>
+            <div class="line"></div>
+            <p class="name flex fSize-32"><span>명지호</span></p>
+            <p class="desc flex fSize-22">
               <span>
                 공부하고 만들어본 작업의 결과물들을 담았습니다. 배울것이 아직 더 많지만 쌓여가는 경험과 함께 성장하는
                 사람이 되고싶습니다.
@@ -199,7 +214,7 @@
         </div>
       </section>
 
-      <section id="createCoding">
+      <section id="createCoding" class="bgTrans">
         <div class="inner">
           <div class="txtBox flex flex-column justify-center align-center textAlign-center">
             <h2 class="fSize-44">
@@ -217,7 +232,21 @@
                 <span>1</span>
               </div>
             </div>
-            <p class="fSize-44">Create Coding</p>
+            <p class="txt flex fSize-44">
+              <span>C</span>
+              <span>r</span>
+              <span>e</span>
+              <span>a</span>
+              <span>t</span>
+              <span>e</span>
+              &nbsp;
+              <span>C</span>
+              <span>o</span>
+              <span>d</span>
+              <span>i</span>
+              <span>n</span>
+              <span>g</span>
+            </p>
           </div>
         </div>
 
@@ -244,7 +273,7 @@
         </ul>
       </section>
 
-      <section id="cloneCoding">
+      <section id="cloneCoding" class="bgTrans">
         <div class="inner">
           <div class="pageNumber_wrap">
             <div class="pageNumber flex fSize-216">
@@ -254,7 +283,20 @@
                 <span>2</span>
               </div>
             </div>
-            <p class="fSize-44">Clone Coding</p>
+            <p class="txt flex fSize-44">
+              <span>C</span>
+              <span>l</span>
+              <span>o</span>
+              <span>n</span>
+              <span>e</span>
+              &nbsp;
+              <span>C</span>
+              <span>o</span>
+              <span>d</span>
+              <span>i</span>
+              <span>n</span>
+              <span>g</span>
+            </p>
           </div>
         </div>
         <ul id="cloneCode_wrap" class="flex-wrap justify-between">
@@ -296,17 +338,26 @@
         </ul>
       </section>
 
-      <section id="learningList">
+      <section id="learningList" class="bgTrans">
         <div class="inner">
           <div class="pageNumber_wrap">
             <div class="pageNumber flex fSize-216">
               <span>0</span>
               <div class="transNum textAlign-center">
-                <span>1</span>
                 <span>2</span>
+                <span>3</span>
               </div>
             </div>
-            <p class="fSize-44">Clone Coding</p>
+            <p class="txt flex fSize-44">
+              <span>L</span>
+              <span>e</span>
+              <span>a</span>
+              <span>r</span>
+              <span>n</span>
+              <span>i</span>
+              <span>n</span>
+              <span>g</span>
+            </p>
           </div>
 
           <ul id="leaningList">
@@ -393,8 +444,18 @@
 
     <!-- #footer -->
     <footer id="footer">
-      <h3 class="fSize-432">CONTACT</h3>
-      <div class="inner">
+      <div class="title">
+        <h3 class="flex justify-center fSize-432">
+          <span>C</span>
+          <span>O</span>
+          <span>N</span>
+          <span>T</span>
+          <span>A</span>
+          <span>C</span>
+          <span>T</span>
+        </h3>
+      </div>
+      <div class="inner flex justify-between align-end">
         <div class="txtBox">
           <p class="name fSize-44">MYOUNG JIHO</p>
           <p class="phoneNum fSize-16">010 - 3929 - 4409</p>
@@ -421,12 +482,29 @@
     </footer>
 
     <!-- script -->
-    <!-- GSAP -->
+    <!-- GSAP CDN -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <!-- GSAP ScrollTrigger -->
+    <!-- GSAP ScrollTrigger CDN -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <!-- GSAP SpiltText -->
+    <!-- GSAP SpiltText CDN -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!-- lenis CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest"></script>
+    <script>
+      const lenis = new Lenis({
+        duration: 2,
+        easing: (t) => 1 - Math.pow(1 - t, 3),
+        // mouseMultiplier: 1, // 마우스 휠 감도
+        // touchMultiplier: 1, // 터치 감도
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

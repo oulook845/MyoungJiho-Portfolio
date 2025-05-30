@@ -74,53 +74,78 @@
           position: relative;
           color: #fff;
           overflow: hidden;
-          #logo {
-            font-family: "Protest Guerrilla";
-            // font-size: 140px;
+          text-align: center;
+          .title {
+            #logo {
+              font-family: "Protest Guerrilla";
+              line-height: 1;
+              overflow: hidden;
+              // font-size: 140px;
+              span {
+                transform: translateY(100%);
+              }
+            }
           }
-          p.desc {
-            width: max-content;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translate(-50%, 100%);
+          p.intro {
+            height: 0;
+            text-align: center;
+            transition: 0.5s;
           }
         }
       }
     }
 
     &#aboutMe {
-      padding: 170px 0 120px;
+      height: 200vh;
+      position: relative;
       .inner {
+        height: 100vh;
         @include maxWidth();
         color: #fff;
+        position: sticky;
+        left: 0;
+        top: 0%;
         .txtBox {
           .title {
-            &::after {
-              content: "";
-              display: block;
-              width: 100%;
-              height: 1px;
-              background: #fff;
+            overflow: hidden;
+            span {
+              transform: translateY(100%);
+              transition: 0.5s;
             }
+          }
+          .line {
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            transition: 1s;
           }
           .name {
             margin-top: 50px;
+            overflow: hidden;
+            span {
+              transform: translateY(100%);
+              transition: 0.5s;
+            }
           }
-          .txt {
+          .desc {
             margin-top: 30px;
+            overflow: hidden;
+            span {
+              transform: translateY(100%);
+              transition: 0.5s;
+            }
           }
         }
         #skillWrap {
-          // height: 0;
-          margin-top: 170px;
+          margin-top: 10%;
           gap: 10px;
           overflow: hidden;
           div.skillList {
             flex: 1;
             padding: 40px;
             position: relative;
-            // opacity: 0;
+            opacity: 0;
+            transition: 0.25s;
             &:not(:last-child) {
               &::after {
                 content: "";
@@ -156,36 +181,22 @@
     }
 
     &#createCoding {
-      background: #fff;
+      opacity: 0;
+
       .inner {
         @include maxWidth();
         .txtBox {
           width: 100%;
           height: 100vh;
           gap: 20px;
-          background: #fff;
-        }
-        .pageNumber_wrap {
-          width: fit-content;
-          line-height: 1;
-
-          position: relative;
-          .pageNumber {
-            height: 220px;
-            font-family: "Protest Guerrilla", sans-serif;
+          h2,
+          p {
+            display: flex;
             overflow: hidden;
             span {
-              height: 220px;
+              opacity: 0;
+              transition: 0.75s;
             }
-            .transNum {
-              transform: translateY(-100%);
-              span {
-                display: block;
-              }
-            }
-          }
-          p {
-            text-indent: 20px;
           }
         }
       }
@@ -221,41 +232,17 @@
             width: 1300px;
             height: 500px;
             margin: 0 auto;
-            background: #fff;
+            background: #fff; /* delt */
           }
         }
       }
     }
 
     &#cloneCoding {
-      background: #fff;
       padding-bottom: 450px;
       .inner {
         @include maxWidth();
         padding-top: 300px;
-        .pageNumber_wrap {
-          width: fit-content;
-          line-height: 1;
-
-          position: relative;
-          .pageNumber {
-            height: 220px;
-            font-family: "Protest Guerrilla", sans-serif;
-            overflow: hidden;
-            span {
-              height: 220px;
-            }
-            .transNum {
-              transform: translateY(-100%);
-              span {
-                display: block;
-              }
-            }
-          }
-          p {
-            text-indent: 20px;
-          }
-        }
       }
       ul#cloneCode_wrap {
         @include maxWidth();
@@ -300,34 +287,10 @@
     }
 
     &#learningList {
-      background: #fff;
       padding-bottom: 500px;
       .inner {
         @include maxWidth();
         padding-top: 300px;
-        .pageNumber_wrap {
-          width: fit-content;
-          line-height: 1;
-
-          position: relative;
-          .pageNumber {
-            height: 220px;
-            font-family: "Protest Guerrilla", sans-serif;
-            overflow: hidden;
-            span {
-              height: 220px;
-            }
-            .transNum {
-              transform: translateY(-100%);
-              span {
-                display: block;
-              }
-            }
-          }
-          p {
-            text-indent: 20px;
-          }
-        }
 
         ul#leaningList {
           @include maxWidth();
@@ -335,6 +298,8 @@
           border-top: 1px solid #333;
           li {
             border-bottom: 1px solid #333;
+            opacity: 0;
+            transition: 0.5s;
             a {
               display: flex;
               justify-content: space-between;
@@ -377,22 +342,33 @@
   height: 100vh;
   background-color: var(--mainColor-black);
   position: relative;
-  h3 {
-    color: #fff;
+  .title {
+    width: 100%;
     mix-blend-mode: difference;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -45%);
+    overflow: hidden;
+    transform: translate(0%, -45%);
+    h3 {
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      line-height: 1;
+      span {
+        opacity: 0;
+        transition: 0.5s;
+      }
+    }
   }
   .inner {
+    @include maxWidth();
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
     .txtBox {
-      .name {
-      }
-      .phoneNum {
-      }
-      .eMail {
+      color: #fff;
+      p {
+        opacity: 0;
+        transition: 0.5s;
       }
     }
     ul#snsList {
