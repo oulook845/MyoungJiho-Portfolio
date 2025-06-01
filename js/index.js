@@ -36,7 +36,9 @@ const createElem = document.getElementById("createCoding"),
   creat_txtSpan = createElem.querySelectorAll(".txtBox span"),
   creat_pageNumber = createElem.querySelector(".pageNumber_wrap"),
   creat_num = creat_pageNumber.querySelector(".transNum"),
-  creat_txts = creat_pageNumber.querySelectorAll(".txt span");
+  creat_txts = creat_pageNumber.querySelectorAll(".txt span"),
+  creat_listWrap = document.getElementById("createCode_wrap"),
+  creat_list = creat_listWrap.querySelectorAll("li");
 /* clone coding element */
 const cloneElem = document.getElementById("cloneCoding"),
   clone_pageNumber = cloneElem.querySelector(".pageNumber_wrap"),
@@ -223,7 +225,7 @@ window.addEventListener("scroll", function () {
       }, 700);
     }
 
-    /* create coding 영역 script #################### */
+    /* Create coding 영역 script #################### */
     if (createElem && currentScroll >= createElem.offsetTop - window.innerHeight / 4) {
       /* create coding 영역이 화면에 들어왔을 때 */
       creat_txtSpan.forEach((span, idx) => {
@@ -231,7 +233,7 @@ window.addEventListener("scroll", function () {
         span.style.transitionDelay = `${idx * 0.25}s`;
       });
     }
-    /* CreateCoding 영역 Page Number 애니메이션 */
+    // CreateCoding 영역 Page Number 애니메이션
     if (createElem && currentScroll >= createElem.offsetTop + window.innerHeight / 3) {
       creat_num.style.transform = "translateY(-100%)";
       creat_txts.forEach((txt, idx) => {
@@ -239,6 +241,12 @@ window.addEventListener("scroll", function () {
         txt.style.transform = "translateY(0)";
       });
     }
+    // Coding List 총 갯수 현재 순서 표시
+    creat_list.forEach((list, idx) => {
+      let total = creat_list.length;
+      let creat_lengthBox = list.querySelector(".code_length");
+      creat_lengthBox.textContent = `0${idx + 1} / 0${total}`;
+    });
 
     /* CloneCoding 영역 Page Number script #################### */
     if (cloneElem && currentScroll >= cloneElem.offsetTop - window.innerHeight / 3) {
