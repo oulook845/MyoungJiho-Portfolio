@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   overflow: hidden;
 }
 #header .inner {
@@ -36,6 +36,9 @@
 }
 #header .inner #gnb ul#gnb-ul {
   gap: 40px;
+}
+#header .inner #gnb ul#gnb-ul li:hover {
+  text-decoration: underline;
 }
 #header .inner #allMenu {
   display: none;
@@ -405,6 +408,7 @@
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .title {
   font-size: 2.75rem; /* 44px */
+  font-weight: bold;
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .desc {
   font-size: 1.375rem; /* 22px */
@@ -413,10 +417,13 @@
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 30px;
   border: 1px solid #fff;
   border-radius: 999px;
   transition: 0.5s;
+}
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn a {
+  display: inline-block;
+  padding: 10px 30px;
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn:hover {
   background-color: rgba(51, 48, 0, 0.7);
@@ -479,6 +486,11 @@
     transform: translateY(0%);
     margin-left: auto;
     text-align: right;
+  }
+}
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap li:nth-child(even) {
+    text-align: left;
   }
 }
 #main section#cloneCoding ul#cloneCode_wrap li figure {
@@ -691,6 +703,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+#footer .inner ul#snsList li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 #footer .inner ul#snsList li#gitHub {
   background-image: url(../images/snsIcon/gitHub.png);

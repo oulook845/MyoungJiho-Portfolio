@@ -1,0 +1,29 @@
+body {
+  cursor: none;
+}
+
+@mixin cursorStyle {
+  border-radius: 50%;
+  position: fixed;
+  left: auto;
+  top: auto;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: exclusion;
+  user-select: none;
+  pointer-events: none;
+}
+#customCursor {
+  @include cursorStyle();
+  width: 1vw;
+  height: 1vw;
+  background-color: #fff;
+  transition: width 0.5s, height 0.5s;
+}
+
+#followCursor {
+  @include cursorStyle();
+  border: 2px solid #fff;
+  width: 2.5vw;
+  height: 2.5vw;
+}
