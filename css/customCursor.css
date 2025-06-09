@@ -1,3 +1,6 @@
+/* 1441px ~ */
+/* 595px - 1440px */
+/* ~ 595px */
 body {
   cursor: none;
 }
@@ -5,8 +8,8 @@ body {
 #customCursor {
   border-radius: 50%;
   position: fixed;
-  left: auto;
-  top: auto;
+  left: -50%;
+  top: -50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: exclusion;
@@ -17,18 +20,28 @@ body {
   background-color: #fff;
   transition: width 0.5s, height 0.5s;
 }
+@media (max-width: 1440px) {
+  #customCursor {
+    display: none;
+  }
+}
 
 #followCursor {
   border-radius: 50%;
   position: fixed;
-  left: auto;
-  top: auto;
+  left: -50%;
+  top: -50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: exclusion;
   user-select: none;
   pointer-events: none;
-  border: 2px solid #fff;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: #fff;
+}
+@media (max-width: 1440px) {
+  #followCursor {
+    display: none;
+  }
 }

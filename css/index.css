@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 1440px ~ */
+/* 1441px ~ */
 /* 595px - 1440px */
 /* ~ 595px */
 #header {
@@ -142,17 +142,17 @@
     padding: 0 100px;
   }
 }
-#main section#visual .inner .txtBox .title #logo {
+#main section#visual .inner .txtBox .title #logo_txt {
   font-family: "Protest Guerrilla";
   line-height: 1;
   overflow: hidden;
 }
 @media (max-width: 596px) {
-  #main section#visual .inner .txtBox .title #logo {
+  #main section#visual .inner .txtBox .title #logo_txt {
     font-size: 8.75rem;
   }
 }
-#main section#visual .inner .txtBox .title #logo span {
+#main section#visual .inner .txtBox .title #logo_txt span {
   transform: translateY(100%);
 }
 #main section#visual .inner .txtBox p.intro {
@@ -412,6 +412,9 @@
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .desc {
   font-size: 1.375rem; /* 22px */
+  word-break: keep-all;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn {
   width: fit-content;
@@ -428,8 +431,9 @@
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn:hover {
   background-color: rgba(51, 48, 0, 0.7);
 }
-#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .used_skillList {
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .contribution {
   margin-top: 50px;
+  font-size: 0.75rem; /* 12px */
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .used_skillList span:not(:last-child) {
   margin-right: 10px;
@@ -566,6 +570,9 @@
   border-bottom: 1px solid #333;
   opacity: 0;
   transition: 0.5s;
+}
+#main section#learningList .inner ul#leaningList li:hover .desc {
+  text-decoration: underline;
 }
 #main section#learningList .inner ul#leaningList li a {
   display: flex;

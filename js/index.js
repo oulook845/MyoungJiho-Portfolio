@@ -16,7 +16,7 @@ const bgWrapElem = document.getElementById("bgWrap"),
 
 /* visual element */
 const visualElem = document.getElementById("visual"),
-  logoElem = document.getElementById("logo"),
+  logoElem = document.getElementById("logo_txt"),
   splitTextElem = logoElem.querySelectorAll("span"),
   introElem = visualElem.querySelector(".intro");
 /* about me element */

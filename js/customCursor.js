@@ -20,8 +20,8 @@ hasLinkElems.forEach((linkElem) => {
     customCursor.style.width = "3vw";
     customCursor.style.height = "3vw";
     followCursor.style.opacity = 0;
-});
-linkElem.addEventListener("mouseleave", function () {
+  });
+  linkElem.addEventListener("mouseleave", function () {
     customCursor.style.width = "1vw";
     customCursor.style.height = "1vw";
     followCursor.style.opacity = 1;

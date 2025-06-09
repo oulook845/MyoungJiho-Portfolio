@@ -1,3 +1,5 @@
+@use "./breakPoint.scss" as bp;
+
 body {
   cursor: none;
 }
@@ -5,13 +7,16 @@ body {
 @mixin cursorStyle {
   border-radius: 50%;
   position: fixed;
-  left: auto;
-  top: auto;
+  left: -50%;
+  top: -50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: exclusion;
   user-select: none;
   pointer-events: none;
+  @include bp.tablet{
+    display: none;
+  }
 }
 #customCursor {
   @include cursorStyle();
@@ -23,7 +28,7 @@ body {
 
 #followCursor {
   @include cursorStyle();
-  border: 2px solid #fff;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: #fff;
 }
