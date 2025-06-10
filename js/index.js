@@ -133,13 +133,13 @@ create_tl.to(bgImgElem, { opacity: 0 }, 0);
 
 /* reize Event 영역 #################### */
 let resizeTimer;
-window.addEventListener("resize", function () {
-  clearTimeout(resizeTimer);
-  // 리사이즈가 끝난 후에만 실행
-  resizeTimer = setTimeout(function () {
-    location.reload(); // 새로고침
-  }, 200); // 200ms 후 실행
-});
+// window.addEventListener("resize", function () {
+//   clearTimeout(resizeTimer);
+//   // 리사이즈가 끝난 후에만 실행
+//   resizeTimer = setTimeout(function () {
+//     location.reload(); // 새로고침
+//   }, 200); // 200ms 후 실행
+// });
 
 /* Scroll Event 영역 #################### */
 /* 디바이스 구분 */
@@ -177,7 +177,7 @@ if (deviceMedie > tablet_mediaQuery) {
   });
 } else {
   // 모바일(터치 디바이스) 전용 스크롤 이벤트
-  window.addEventListener("scroll", function () {});
+  // window.addEventListener("scroll", function () {});
 }
 
 /* 스크롤 이벤트 */
