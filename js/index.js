@@ -146,13 +146,20 @@ create_tl.to(bgImgElem, { opacity: 0 }, 0);
 
 /* reize Event 영역 #################### */
 let resizeTimer;
-// window.addEventListener("resize", function () {
-//   clearTimeout(resizeTimer);
-//   // 리사이즈가 끝난 후에만 실행
-//   resizeTimer = setTimeout(function () {
-//     location.reload(); // 새로고침
-//   }, 500); // 500ms 후 실행
-// });
+let lastWidth = window.innerWidth;
+let lastHeight = window.innerHeight;
+
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function () {
+    // 실제로 크기가 변했을 때만 새로고침
+    if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+      lastWidth = window.innerWidth;
+      lastHeight = window.innerHeight;
+      location.reload();
+    }
+  }, 500);
+});
 
 /* Scroll Event 영역 #################### */
 let lastScrollTime = 0;
