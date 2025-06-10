@@ -28,17 +28,93 @@
   background: rgba(51, 51, 51, 0.7450980392);
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 1440px) {
+  #header .inner #gnb {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 596px) {
   #header .inner #gnb {
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0px;
+    background: rgba(51, 51, 51, 0.9176470588);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
     display: none;
   }
 }
 #header .inner #gnb ul#gnb-ul {
   gap: 40px;
 }
+@media (max-width: 596px) {
+  #header .inner #gnb ul#gnb-ul {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 70px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 596px) {
+  #header .inner #gnb ul#gnb-ul li {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ababab;
+  }
+  #header .inner #gnb ul#gnb-ul li::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+}
 #header .inner #gnb ul#gnb-ul li:hover {
   text-decoration: underline;
+}
+#header .inner #close_btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+@media (max-width: 596px) {
+  #header .inner #close_btn {
+    display: block;
+  }
+}
+#header .inner #close_btn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-left: -15px;
+  margin-top: -1px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(45deg);
+}
+#header .inner #close_btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-left: -15px;
+  margin-top: -1px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(-45deg);
 }
 #header .inner #allMenu {
   display: none;
@@ -136,10 +212,14 @@
   overflow: hidden;
   text-align: center;
 }
+@media (max-width: 1440px) {
+  #main section#visual .inner .txtBox {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 596px) {
   #main section#visual .inner .txtBox {
     color: var(--mainColor-black);
-    padding: 0 100px;
   }
 }
 #main section#visual .inner .txtBox .title #logo_txt {
@@ -147,9 +227,15 @@
   line-height: 1;
   overflow: hidden;
 }
+@media (max-width: 1440px) {
+  #main section#visual .inner .txtBox .title #logo_txt {
+    font-size: 16rem;
+    font-size: 20vw;
+  }
+}
 @media (max-width: 596px) {
   #main section#visual .inner .txtBox .title #logo_txt {
-    font-size: 8.75rem;
+    font-size: 5rem;
   }
 }
 #main section#visual .inner .txtBox .title #logo_txt span {
@@ -159,16 +245,20 @@
   height: 0;
   text-align: center;
   transition: 0.5s;
+  word-break: keep-all;
 }
 @media (max-width: 1440px) {
   #main section#visual .inner .txtBox p.intro {
     height: auto;
+    margin-top: 30px;
   }
 }
 @media (max-width: 596px) {
   #main section#visual .inner .txtBox p.intro {
-    text-align: left;
-    margin-top: 80px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: var(--subColor-black_777);
   }
   #main section#visual .inner .txtBox p.intro br {
     display: none;
@@ -200,9 +290,16 @@
   left: 0;
   top: 0%;
 }
+@media (max-width: 1440px) {
+  #main section#aboutMe .inner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+}
 @media (max-width: 596px) {
   #main section#aboutMe .inner {
     color: var(--mainColor-black);
+    padding: 0 20px;
   }
 }
 @media (max-width: 596px) {
@@ -230,6 +327,11 @@
   margin-top: 2.604vw; /* 50px */
   overflow: hidden;
 }
+@media (max-width: 596px) {
+  #main section#aboutMe .inner .txtBox .name {
+    font-size: 22px;
+  }
+}
 #main section#aboutMe .inner .txtBox .name span {
   transform: translateY(100%);
   transition: 0.5s;
@@ -237,6 +339,13 @@
 #main section#aboutMe .inner .txtBox .desc {
   margin-top: 1.563vw; /* 30px */
   overflow: hidden;
+  word-break: keep-all;
+}
+@media (max-width: 596px) {
+  #main section#aboutMe .inner .txtBox .desc {
+    font-size: 14px;
+    color: var(--subColor-black_777);
+  }
 }
 #main section#aboutMe .inner .txtBox .desc span {
   transform: translateY(100%);
@@ -246,12 +355,16 @@
   gap: 10px;
   overflow: hidden;
 }
+@media (max-width: 1440px) {
+  #main section#aboutMe .inner #skillWrap {
+    flex-direction: column;
+  }
+}
 @media (max-width: 596px) {
   #main section#aboutMe .inner #skillWrap {
     max-width: 460px;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
     gap: 100px;
     margin-top: 150px;
   }
@@ -273,12 +386,16 @@
   right: 0;
   top: 5%;
 }
-@media (max-width: 596px) {
+@media (max-width: 1440px) {
   #main section#aboutMe .inner #skillWrap div.skillList {
-    padding: 0;
+    padding: 50px 0;
   }
   #main section#aboutMe .inner #skillWrap div.skillList:not(:last-child)::after {
-    display: none;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: auto;
+    bottom: 0px;
   }
 }
 #main section#aboutMe .inner #skillWrap div.skillList h3 {
@@ -293,8 +410,16 @@
   text-align: center;
   font-size: 12px;
 }
+@media (max-width: 1440px) {
+  #main section#aboutMe .inner #skillWrap div.skillList ul li {
+    width: 100px;
+  }
+}
 #main section#aboutMe .inner #skillWrap div.skillList ul li figure figcaption {
   margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 1440px) {
   #main section#createCoding {
@@ -344,6 +469,11 @@
   left: 0;
   top: 0;
 }
+@media (max-width: 596px) {
+  #main section#createCoding ul#createCode_wrap li {
+    padding: 0 20px;
+  }
+}
 #main section#createCoding ul#createCode_wrap li#ikeaCoding {
   background-color: var(--ikea-brandColor);
 }
@@ -384,6 +514,7 @@
 }
 @media (max-width: 596px) {
   #main section#createCoding ul#createCode_wrap li .codeInfo .logoArea {
+    width: 200px;
     height: 150px;
   }
 }
@@ -415,6 +546,17 @@
   word-break: keep-all;
   letter-spacing: 0.01em;
   line-height: 1.5;
+}
+@media (max-width: 596px) {
+  #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .desc {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* 표시할 줄 수 */
+    text-overflow: ellipsis;
+    display: none;
+  }
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn {
   width: fit-content;
@@ -558,6 +700,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 596px) {
+  #main section#learningList .inner {
+    padding: 0 20px;
+  }
+}
 #main section#learningList .inner ul#leaningList {
   max-width: 1500px;
   margin-left: auto;
@@ -588,7 +735,7 @@
 @media (max-width: 596px) {
   #main section#learningList .inner ul#leaningList li a {
     flex-direction: column;
-    padding: 50px 0;
+    padding: 30px 0;
   }
 }
 #main section#learningList .inner ul#leaningList li .listInfo h4 {
@@ -596,9 +743,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  column-gap: 20px;
   font-weight: bold;
   color: var(--subColor-black_333);
+}
+@media (max-width: 596px) {
+  #main section#learningList .inner ul#leaningList li .listInfo h4 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 #main section#learningList .inner ul#leaningList li .listInfo h4 span {
   font-size: 1rem;
@@ -622,11 +775,12 @@
 @media (max-width: 596px) {
   #main section#learningList .inner ul#leaningList li p.desc {
     width: 100%;
+    font-size: 12px;
     margin-top: 50px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 2; /* 표시할 줄 수 */
+    -webkit-line-clamp: 3; /* 표시할 줄 수 */
     text-overflow: ellipsis;
   }
 }
@@ -642,12 +796,6 @@
   mix-blend-mode: difference;
   overflow: hidden;
   transform: translateY(-45%);
-}
-@media (max-width: 596px) {
-  #footer .title {
-    padding: 50px 0;
-    transform: translateY(-100%);
-  }
 }
 #footer .title h3 {
   width: 100%;
@@ -687,8 +835,8 @@
     height: 100%;
     text-align: center;
     flex-direction: column;
-    gap: 200px;
-    justify-content: space-evenly;
+    gap: 100px;
+    justify-content: center;
     align-items: center;
     top: 0;
     bottom: auto;
@@ -701,11 +849,26 @@
   opacity: 0;
   transition: 0.5s;
 }
+@media (max-width: 596px) {
+  #footer .inner .txtBox p#name {
+    font-size: 18px;
+  }
+}
 #footer .inner .txtBox p#phoneNum {
   margin-top: 50px;
 }
+@media (max-width: 596px) {
+  #footer .inner .txtBox p#phoneNum {
+    margin-top: 30px;
+  }
+}
 #footer .inner .txtBox p#eMail {
   margin-top: 20px;
+}
+@media (max-width: 596px) {
+  #footer .inner .txtBox p#eMail {
+    margin-top: 10px;
+  }
 }
 #footer .inner ul#snsList {
   gap: 30px;

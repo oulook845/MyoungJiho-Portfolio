@@ -9,7 +9,9 @@ const mobile_mediaQuery = 596;
 const headerElem = document.getElementById("header"),
   gnbElem = document.getElementById("gnb"),
   gnb_UlElem = document.getElementById("gnb-ul"),
-  gnb_UlList = gnb_UlElem.querySelectorAll("li");
+  gnb_UlList = gnb_UlElem.querySelectorAll("li"),
+  gnb_allMenu = document.getElementById("allMenu"),
+  gnb_closeBtn = document.getElementById("close_btn");
 
 const bgWrapElem = document.getElementById("bgWrap"),
   bgImgElem = bgWrapElem.querySelector(".bgImg");
@@ -78,6 +80,13 @@ gnb_UlList.forEach((liElem) => {
     }
   });
 });
+// header mobile 이벤트
+gnb_allMenu.addEventListener("click", function () {
+  gnbElem.style.display = "block";
+});
+gnb_closeBtn.addEventListener("click", function () {
+  gnbElem.style.display = "none";
+});
 
 /* GSAP script 시작 #################### */
 gsap.registerPlugin(ScrollTrigger);
@@ -142,12 +151,27 @@ let resizeTimer;
 // });
 
 /* Scroll Event 영역 #################### */
+let lastScrollTime = 0;
+
 /* 디바이스 구분 */
 let deviceMedie = window.outerWidth;
 if (deviceMedie > tablet_mediaQuery) {
   // 데스크탑(PC) 전용 스크롤 이벤트
   window.addEventListener("scroll", function () {
     let currentScroll = Math.floor(window.scrollY);
+
+    /* header scroll event #################### */
+    /* 스크롤 방향 event */
+    if (currentScroll > lastScrollY) {
+      // 아래로 스크롤 (Scroll Down)
+      gnbElem.style.transform = "translateY(-100%)";
+    } else if (currentScroll < lastScrollY) {
+      // 위로 스크롤 (Scroll Up)
+      gnbElem.style.transform = "translateY(0%)";
+    }
+    lastScrollY = currentScroll;
+
+    /* visual scroll event #################### */
     /* 현재 스크롤이 0 일 경우 */
     if (currentScroll <= 0) {
       introElem.style.height = 0;
@@ -181,7 +205,6 @@ if (deviceMedie > tablet_mediaQuery) {
 }
 
 /* 스크롤 이벤트 */
-let lastScrollTime = 0;
 const throttleDelay = 100; // 100ms마다 한 번씩만 실행
 let lastScrollY = Number();
 window.addEventListener("scroll", function () {
@@ -191,16 +214,6 @@ window.addEventListener("scroll", function () {
     lastScrollTime = now;
     let currentScroll = Math.floor(window.scrollY);
     // console.log(currentScroll);
-
-    /* 스크롤 방향 event */
-    if (currentScroll > lastScrollY) {
-      // 아래로 스크롤 (Scroll Down)
-      gnbElem.style.transform = "translateY(-100%)";
-    } else if (currentScroll < lastScrollY) {
-      // 위로 스크롤 (Scroll Up)
-      gnbElem.style.transform = "translateY(0%)";
-    }
-    lastScrollY = currentScroll;
 
     /* aboutMe 영역 애니메이션 #################### */
     if (aboutElem && currentScroll >= aboutElem.offsetTop - window.innerHeight / 2) {

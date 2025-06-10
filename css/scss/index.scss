@@ -36,15 +36,85 @@
       border-radius: 999px;
       background: #333333be;
       transition: 0.25s ease-in-out;
+      @include tablet() {
+        transform: translateY(0);
+      }
       @include mobile() {
-        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 0px;
+        background: #333333ea;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
         display: none;
       }
       ul#gnb-ul {
         gap: 40px;
+        @include mobile() {
+          flex-direction: column;
+          gap: 0;
+          margin-top: 70px;
+          padding: 0 20px;
+        }
+        li {
+          @include mobile() {
+            height: 60px;
+            line-height: 60px;
+            padding: 0 10px;
+            border-bottom: 1px solid #ababab;
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 5px;
+              height: 5px;
+              margin-right: 10px;
+              background-color: #fff;
+            }
+          }
+        }
         li:hover {
           text-decoration: underline;
         }
+      }
+    }
+    #close_btn {
+      display: none;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      @include mobile() {
+        display: block;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-left: -15px;
+        margin-top: -1px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-left: -15px;
+        margin-top: -1px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: rotate(-45deg);
       }
     }
     #allMenu {
@@ -136,9 +206,11 @@
           color: #fff;
           overflow: hidden;
           text-align: center;
+          @include tablet() {
+            padding: 0 20px;
+          }
           @include mobile() {
             color: var(--mainColor-black);
-            padding: 0 100px;
           }
           .title {
             #logo_txt {
@@ -146,8 +218,12 @@
               line-height: 1;
               overflow: hidden;
               // font-size: 140px;
+              @include tablet() {
+                font-size: 16rem;
+                font-size: 20vw;
+              }
               @include mobile() {
-                font-size: 8.75rem;
+                font-size: 5rem;
               }
               span {
                 transform: translateY(100%);
@@ -158,12 +234,16 @@
             height: 0;
             text-align: center;
             transition: 0.5s;
+            word-break: keep-all;
             @include tablet() {
               height: auto;
+              margin-top: 30px;
             }
             @include mobile() {
-              text-align: left;
-              margin-top: 80px;
+              text-align: center;
+              margin-top: 50px;
+              font-size: 14px;
+              color: var(--subColor-black_777);
               br {
                 display: none;
               }
@@ -191,8 +271,13 @@
         position: sticky;
         left: 0;
         top: 0%;
+        @include tablet() {
+          padding-top: 10%;
+          padding-bottom: 10%;
+        }
         @include mobile() {
           color: var(--mainColor-black);
+          padding: 0 20px;
         }
         .txtBox {
           @include mobile() {
@@ -215,6 +300,9 @@
           .name {
             margin-top: 2.604vw; /* 50px */
             overflow: hidden;
+            @include mobile() {
+              font-size: 22px;
+            }
             span {
               transform: translateY(100%);
               transition: 0.5s;
@@ -223,6 +311,11 @@
           .desc {
             margin-top: 1.563vw; /* 30px */
             overflow: hidden;
+            word-break: keep-all;
+            @include mobile() {
+              font-size: 14px;
+              color: var(--subColor-black_777);
+            }
             span {
               transform: translateY(100%);
               transition: 0.5s;
@@ -232,9 +325,11 @@
         #skillWrap {
           gap: 10px;
           overflow: hidden;
+          @include tablet() {
+            flex-direction: column;
+          }
           @include mobile() {
             @include maxWidth_mobile();
-            flex-direction: column;
             gap: 100px;
             margin-top: 150px;
           }
@@ -256,11 +351,15 @@
                 top: 5%;
               }
             }
-            @include mobile() {
-              padding: 0;
+            @include tablet() {
+              padding: 50px 0;
               &:not(:last-child) {
                 &::after {
-                  display: none;
+                  width: 100%;
+                  height: 1px;
+                  left: 0;
+                  top: auto;
+                  bottom: 0px;
                 }
               }
             }
@@ -274,9 +373,15 @@
                 width: calc(100% / 4);
                 text-align: center;
                 font-size: 12px;
+                @include tablet() {
+                  width: 100px;
+                }
                 figure {
                   figcaption {
                     margin-top: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                   }
                 }
               }
@@ -327,6 +432,9 @@
           position: sticky;
           left: 0;
           top: 0;
+          @include mobile() {
+            padding: 0 20px;
+          }
           &#ikeaCoding {
             background-color: var(--ikea-brandColor);
           }
@@ -362,6 +470,7 @@
                 overflow: hidden;
               }
               @include mobile() {
+                width: 200px;
                 height: 150px;
               }
             }
@@ -388,6 +497,16 @@
                 word-break: keep-all;
                 letter-spacing: 0.01em;
                 line-height: 1.5;
+                @include mobile() {
+                  font-size: 14px;
+
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  -webkit-line-clamp: 3; /* 표시할 줄 수 */
+                  text-overflow: ellipsis;
+                  display: none;
+                }
               }
               .goSite_btn {
                 width: fit-content;
@@ -492,10 +611,10 @@
               top: 50%;
               transform: translate(-50%, -50%);
               z-index: 1;
-              span{
+              span {
                 display: block;
                 font-size: 16px;
-                font-weight:400;
+                font-weight: 400;
                 margin-top: 10px;
               }
             }
@@ -516,6 +635,9 @@
       padding: 20% 0 30%;
       .inner {
         @include maxWidth();
+        @include mobile() {
+          padding: 0 20px;
+        }
         ul#leaningList {
           @include maxWidth();
           margin-top: 110px;
@@ -536,7 +658,7 @@
               padding: 50px;
               @include mobile {
                 flex-direction: column;
-                padding: 50px 0;
+                padding: 30px 0;
               }
             }
 
@@ -546,9 +668,13 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                gap: 20px;
+                column-gap: 20px;
                 font-weight: bold;
                 color: var(--subColor-black_333);
+                @include mobile() {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
                 span {
                   @include fontSizes.fontSize(16);
                   font-weight: 400;
@@ -569,11 +695,12 @@
               color: var(--subColor-black_777);
               @include mobile {
                 width: 100%;
+                font-size: 12px;
                 margin-top: 50px;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                -webkit-line-clamp: 2; /* 표시할 줄 수 */
+                -webkit-line-clamp: 3; /* 표시할 줄 수 */
                 text-overflow: ellipsis;
               }
             }
@@ -594,10 +721,6 @@
     mix-blend-mode: difference;
     overflow: hidden;
     transform: translateY(-45%);
-    @include mobile() {
-      padding: 50px 0;
-      transform: translateY(-100%);
-    }
     h3 {
       width: 100%;
       color: #fff;
@@ -627,8 +750,8 @@
       height: 100%;
       text-align: center;
       flex-direction: column;
-      gap: 200px;
-      justify-content: space-evenly;
+      gap: 100px;
+      justify-content: center;
       align-items: center;
       top: 0;
       bottom: auto;
@@ -638,11 +761,22 @@
       p {
         opacity: 0;
         transition: 0.5s;
+        &#name {
+          @include mobile() {
+            font-size: 18px;
+          }
+        }
         &#phoneNum {
           margin-top: 50px;
+          @include mobile() {
+            margin-top: 30px;
+          }
         }
         &#eMail {
           margin-top: 20px;
+          @include mobile() {
+            margin-top: 10px;
+          }
         }
       }
     }
