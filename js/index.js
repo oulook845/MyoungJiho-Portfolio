@@ -78,6 +78,10 @@ gnb_UlList.forEach((liElem) => {
         behavior: "smooth",
       });
     }
+    // 모바일에선 이동시 gnb 제거
+    if (window.outerWidth <= mobile_mediaQuery) {
+      gnbElem.style.display = "none";
+    }
   });
 });
 // header mobile 이벤트
@@ -142,13 +146,13 @@ create_tl.to(bgImgElem, { opacity: 0 }, 0);
 
 /* reize Event 영역 #################### */
 let resizeTimer;
-// window.addEventListener("resize", function () {
-//   clearTimeout(resizeTimer);
-//   // 리사이즈가 끝난 후에만 실행
-//   resizeTimer = setTimeout(function () {
-//     location.reload(); // 새로고침
-//   }, 200); // 200ms 후 실행
-// });
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimer);
+  // 리사이즈가 끝난 후에만 실행
+  resizeTimer = setTimeout(function () {
+    location.reload(); // 새로고침
+  }, 500); // 500ms 후 실행
+});
 
 /* Scroll Event 영역 #################### */
 let lastScrollTime = 0;
@@ -204,7 +208,7 @@ if (deviceMedie > tablet_mediaQuery) {
   // window.addEventListener("scroll", function () {});
 }
 
-/* 스크롤 이벤트 */
+/* 공통 스크롤 이벤트 */
 const throttleDelay = 100; // 100ms마다 한 번씩만 실행
 let lastScrollY = Number();
 window.addEventListener("scroll", function () {
