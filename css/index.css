@@ -692,6 +692,14 @@
     padding: 30px 20px;
   }
 }
+#main section#cloneCoding ul#cloneCode_wrap li .toolList {
+  font-size: 12px;
+  color: var(--subColor-black_777);
+  margin-top: 10px;
+}
+#main section#cloneCoding ul#cloneCode_wrap li .toolList span:not(:first-child) {
+  margin-left: 3px;
+}
 #main section#learningList {
   padding: 20% 0 30%;
 }

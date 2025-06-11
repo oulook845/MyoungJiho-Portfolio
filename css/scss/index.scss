@@ -627,6 +627,16 @@
               padding: 30px 20px;
             }
           }
+          .toolList{
+            font-size: 12px;
+            color: var(--subColor-black_777);
+            margin-top: 10px;
+            span{
+              &:not(:first-child){
+                margin-left: 3px;
+              }
+            }
+          }
         }
       }
     }
