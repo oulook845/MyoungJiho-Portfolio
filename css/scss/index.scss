@@ -585,6 +585,15 @@
             height: 590px;
             position: relative;
             background: url(../images/cloneCoding/clone01.png) no-repeat center / cover;
+            &#pulmuone {
+              background-image: url(../images/cloneCoding/cloneCode_pulmone.png);
+            }
+            &#doctors {
+              background-image: url(../images/cloneCoding/cloneCode_doctors.png);
+            }
+            &#youyeonMind {
+              background-image: url(../images/cloneCoding/cloneCode_youyeonmind.png);
+            }
             @include tablet() {
               width: 100%;
               height: calc((100vw - 140px) / 2);
@@ -602,37 +611,43 @@
               left: 0;
               top: 0;
             }
-            figcaption {
-              color: #fff;
-              font-size: 54px;
-              font-weight: bold;
+            .figure_wrap {
               position: absolute;
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
-              z-index: 1;
-              span {
-                display: block;
-                font-size: 16px;
-                font-weight: 400;
-                margin-top: 10px;
+              figcaption {
+                color: #fff;
+                text-align: center;
+                span {
+                  display: inline-block;
+                  font-size: 12px;
+                  font-weight: 400;
+                  margin-top: 10px;
+                }
               }
             }
           }
-          button.viewBtn {
+          button {
+            border: 1px solid #000;
+            border-radius: 999px;
             font-size: 18px;
-            margin-top: 30px;
-            @include mobile() {
-              margin: 0;
-              padding: 30px 20px;
+            margin-top: 20px;
+            a {
+              display: inline-block;
+              padding: 7px 25px 5px;
+              @include mobile() {
+                margin: 0;
+                padding: 30px 20px;
+              }
             }
           }
-          .toolList{
+          .toolList {
             font-size: 12px;
             color: var(--subColor-black_777);
             margin-top: 10px;
-            span{
-              &:not(:first-child){
+            span {
+              &:not(:first-child) {
                 margin-left: 3px;
               }
             }

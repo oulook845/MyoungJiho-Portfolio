@@ -645,6 +645,15 @@
   position: relative;
   background: url(../images/cloneCoding/clone01.png) no-repeat center/cover;
 }
+#main section#cloneCoding ul#cloneCode_wrap li figure#pulmuone {
+  background-image: url(../images/cloneCoding/cloneCode_pulmone.png);
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure#doctors {
+  background-image: url(../images/cloneCoding/cloneCode_doctors.png);
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure#youyeonMind {
+  background-image: url(../images/cloneCoding/cloneCode_youyeonmind.png);
+}
 @media (max-width: 1440px) {
   #main section#cloneCoding ul#cloneCode_wrap li figure {
     width: 100%;
@@ -666,28 +675,34 @@
   left: 0;
   top: 0;
 }
-#main section#cloneCoding ul#cloneCode_wrap li figure figcaption {
-  color: #fff;
-  font-size: 54px;
-  font-weight: bold;
+#main section#cloneCoding ul#cloneCode_wrap li figure .figure_wrap {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
-#main section#cloneCoding ul#cloneCode_wrap li figure figcaption span {
-  display: block;
-  font-size: 16px;
+#main section#cloneCoding ul#cloneCode_wrap li figure .figure_wrap figcaption {
+  color: #fff;
+  text-align: center;
+}
+#main section#cloneCoding ul#cloneCode_wrap li figure .figure_wrap figcaption span {
+  display: inline-block;
+  font-size: 12px;
   font-weight: 400;
   margin-top: 10px;
 }
-#main section#cloneCoding ul#cloneCode_wrap li button.viewBtn {
+#main section#cloneCoding ul#cloneCode_wrap li button {
+  border: 1px solid #000;
+  border-radius: 999px;
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+#main section#cloneCoding ul#cloneCode_wrap li button a {
+  display: inline-block;
+  padding: 7px 25px 5px;
 }
 @media (max-width: 596px) {
-  #main section#cloneCoding ul#cloneCode_wrap li button.viewBtn {
+  #main section#cloneCoding ul#cloneCode_wrap li button a {
     margin: 0;
     padding: 30px 20px;
   }
