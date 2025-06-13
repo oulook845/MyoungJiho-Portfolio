@@ -633,19 +633,21 @@
             border-radius: 999px;
             font-size: 18px;
             margin-top: 20px;
+            @include mobile() {
+              margin-left: 10px;
+            }
             a {
               display: inline-block;
               padding: 7px 25px 5px;
-              @include mobile() {
-                margin: 0;
-                padding: 30px 20px;
-              }
             }
           }
           .toolList {
             font-size: 12px;
             color: var(--subColor-black_777);
             margin-top: 10px;
+            @include mobile() {
+              margin-left: 10px;
+            }
             span {
               &:not(:first-child) {
                 margin-left: 3px;

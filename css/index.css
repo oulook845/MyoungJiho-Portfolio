@@ -697,20 +697,24 @@
   font-size: 18px;
   margin-top: 20px;
 }
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap li button {
+    margin-left: 10px;
+  }
+}
 #main section#cloneCoding ul#cloneCode_wrap li button a {
   display: inline-block;
   padding: 7px 25px 5px;
-}
-@media (max-width: 596px) {
-  #main section#cloneCoding ul#cloneCode_wrap li button a {
-    margin: 0;
-    padding: 30px 20px;
-  }
 }
 #main section#cloneCoding ul#cloneCode_wrap li .toolList {
   font-size: 12px;
   color: var(--subColor-black_777);
   margin-top: 10px;
+}
+@media (max-width: 596px) {
+  #main section#cloneCoding ul#cloneCode_wrap li .toolList {
+    margin-left: 10px;
+  }
 }
 #main section#cloneCoding ul#cloneCode_wrap li .toolList span:not(:first-child) {
   margin-left: 3px;
