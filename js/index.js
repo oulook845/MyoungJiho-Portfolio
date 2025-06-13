@@ -149,17 +149,17 @@ let resizeTimer;
 let lastWidth = window.innerWidth;
 let lastHeight = window.innerHeight;
 
-window.addEventListener("resize", function () {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function () {
-    // 실제로 크기가 변했을 때만 새로고침
-    if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
-      lastWidth = window.innerWidth;
-      lastHeight = window.innerHeight;
-      location.reload();
-    }
-  }, 500);
-});
+// window.addEventListener("resize", function () {
+//   clearTimeout(resizeTimer);
+//   resizeTimer = setTimeout(function () {
+//     // 실제로 크기가 변했을 때만 새로고침
+//     if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+//       lastWidth = window.innerWidth;
+//       lastHeight = window.innerHeight;
+//       location.reload();
+//     }
+//   }, 500);
+// });
 
 /* Scroll Event 영역 #################### */
 let lastScrollTime = 0;
