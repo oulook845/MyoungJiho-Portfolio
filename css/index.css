@@ -573,8 +573,20 @@
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .goSite_btn:hover {
   background-color: rgba(51, 48, 0, 0.7);
 }
-#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .contribution {
-  margin-top: 50px;
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .produceInfo {
+  margin-top: 30px;
+}
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .produceInfo .responsiveList span {
+  display: inline-block;
+}
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .produceInfo .responsiveList span:not(:first-child)::before {
+  content: "/";
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 8px;
+}
+#main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .produceInfo .contribution {
+  margin-top: 10px;
   font-size: 0.75rem; /* 12px */
 }
 #main section#createCoding ul#createCode_wrap li .codeInfo .infoArea .used_skillList span:not(:last-child) {

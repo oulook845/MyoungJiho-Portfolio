@@ -523,9 +523,25 @@
                   background-color: rgba(51, 48, 0, 0.7);
                 }
               }
-              .contribution {
-                margin-top: 50px;
-                font-size: 0.75rem; /* 12px */
+              .produceInfo{
+                margin-top: 30px;
+                .responsiveList {
+                  span{
+                    display: inline-block;
+                    &:not(:first-child){
+                      &::before{
+                        content:"/";
+                        display: inline-block;
+                        padding-left: 5px;
+                        padding-right: 8px;
+                      }
+                    }
+                  }
+                }
+                .contribution {
+                  margin-top: 10px;
+                  font-size: 0.75rem; /* 12px */
+                }
               }
               .used_skillList {
                 span {
