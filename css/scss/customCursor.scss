@@ -2,6 +2,9 @@
 
 body {
   cursor: none;
+  @include bp.tablet{
+    cursor:auto;
+  }
 }
 
 @mixin cursorStyle {

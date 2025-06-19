@@ -4,6 +4,11 @@
 body {
   cursor: none;
 }
+@media (max-width: 1440px) {
+  body {
+    cursor: auto;
+  }
+}
 
 #customCursor {
   border-radius: 50%;
